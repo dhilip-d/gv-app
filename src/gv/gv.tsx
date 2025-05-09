@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 function App() {
   const [images] = useState([
-    { name: 'Beach Sunset', url: '' }
-    // { name: 'Mountain View', url: '/images/mountain.jpg' },
-    // { name: 'City Skyline', url: '/images/city.jpg' },
-    // { name: 'Forest Trail', url: '/images/forest.jpg' },
-    // { name: 'Desert Dunes', url: '/images/desert.jpg' },
+    { name: 'Beach Sunset', url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e' },
+    { name: 'Mountain View', url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470' },
+    { name: 'City Skyline', url: 'https://images.unsplash.com/photo-1494526585095-c41746248156' },
+    { name: 'Forest Trail', url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb' },
+    { name: 'Desert Dunes', url: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6' },
   ]);
 
   return (
@@ -16,7 +16,7 @@ function App() {
         {images.map((img, idx) => (
           <div key={idx} style={{ margin: '10px', textAlign: 'center' }}>
             <img
-              src={img.url}
+              src={`${img.url}?auto=format&fit=crop&w=400&q=80`}
               alt={img.name}
               style={{ width: '200px', height: 'auto', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
             />
